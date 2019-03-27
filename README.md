@@ -12,3 +12,10 @@ ARSW VALLEY OF TEARS
   Profesor:
   -------
   ##### SAAVEDRA ORJUELA DAVID ARMANDO
+  
+  *_Creating a local repository:_*
+  ------- 
+  
+  ![alt text][1]
+
+  [1]:https://github.com/alejandrordto/BackEndValleyOfTears/blob/master/src/main/resources/image/despliege.PNG
