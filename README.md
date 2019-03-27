@@ -13,7 +13,7 @@ ARSW VALLEY OF TEARS
   -------
   ##### SAAVEDRA ORJUELA DAVID ARMANDO
   
-  *_Creating a local repository:_*
+  *_Deploy diagram:_*
   ------- 
   
   ![alt text][1]
