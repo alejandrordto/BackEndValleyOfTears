@@ -18,7 +18,7 @@ ARSW VALLEY OF TEARS
   
   ![alt text][1]
 
-  [1]:https://github.com/alejandrordto/BackEndValleyOfTears/img/DeployDiagram.PNG
+  [1]:https://github.com/alejandrordto/BackEndValleyOfTears/blob/master/img/DeployDiagram.PNG
 
 
    [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://valley0ftears.herokuapp.com)
