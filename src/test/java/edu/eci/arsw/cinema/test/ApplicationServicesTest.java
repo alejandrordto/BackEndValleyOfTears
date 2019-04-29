@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
 package edu.eci.arsw.cinema.test;
 
 import org.junit.Test;
@@ -14,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  *
  * @author cristian
  */
+/*
 @RunWith(SpringRunner.class)
 @SpringBootTest()
 public class ApplicationServicesTest {
@@ -24,4 +26,4 @@ public class ApplicationServicesTest {
         
         
     }
-}
+}*/
