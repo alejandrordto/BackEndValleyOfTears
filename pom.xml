@@ -95,8 +95,13 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-handler</artifactId>
             <version>4.0.42.Final</version>
-        </dependency>               
-                                                                
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>4.3.3.RELEASE</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
 
     <build>
