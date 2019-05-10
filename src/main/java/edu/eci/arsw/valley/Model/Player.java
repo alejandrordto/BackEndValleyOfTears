@@ -3,36 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.arsw.valley;
+package edu.eci.arsw.valley.Model;
 
 /**
  *
  * @author user
  */
-public class Player {
+public class Player implements Comparable<Player> {
     float positiony,positionx;
     String rotation;
+    int id,pos;
 
-    public Player(float positionx, String rotation) {
-        this.positionx = positionx;
-        this.rotation = rotation;
+    public int getPos() {
+        return pos;
     }
 
-    public Player(float positiony, float positionx) {
-        this.positiony = positiony;
-        this.positionx = positionx;
+    public void setPos(int pos) {
+        this.pos = pos;
     }
 
-    public Player(float positionx) {
-        this.positionx = positionx;
-    }
-
-    public Player(float positiony, float positionx, String rotation) {
+    public Player(float positiony, float positionx, String rotation, int id, int pos) {
         this.positiony = positiony;
         this.positionx = positionx;
         this.rotation = rotation;
+        this.id = id;
+        this.pos = pos;
     }
+    
 
+   
     public Player() {
     }
 
@@ -59,5 +58,27 @@ public class Player {
     public void setRotation(String rotation) {
         this.rotation = rotation;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public int compareTo(Player t) {
+        return t.getId() - this.getId();
+    }
+
+    public Player(float positiony, float positionx, String rotation, int id) {
+        this.positiony = positiony;
+        this.positionx = positionx;
+        this.rotation = rotation;
+        this.id = id;
+    }
+
+   
     
 }
