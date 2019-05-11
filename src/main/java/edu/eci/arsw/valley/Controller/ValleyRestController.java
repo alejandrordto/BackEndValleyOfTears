@@ -48,7 +48,7 @@ public class ValleyRestController {
     @RequestMapping(path = "/{roomId}/players",method = RequestMethod.PUT)
     public ResponseEntity<?> addPlayer(@PathVariable(name = "roomId") String roomId,@RequestBody Player pl) throws ServicesException {
         try {
-            System.out.println(pl.getPos());
+            
             services.registerPlayerToRoom(Integer.parseInt(roomId), pl);
                     return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (ServicesException ex) {

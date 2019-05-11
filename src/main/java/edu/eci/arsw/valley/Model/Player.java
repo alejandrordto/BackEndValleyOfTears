@@ -10,8 +10,8 @@ package edu.eci.arsw.valley.Model;
  * @author user
  */
 public class Player implements Comparable<Player> {
-    float positiony,positionx;
-    String rotation;
+    
+    String tecla;
     int id,pos;
 
     public int getPos() {
@@ -22,41 +22,20 @@ public class Player implements Comparable<Player> {
         this.pos = pos;
     }
 
-    public Player(float positiony, float positionx, String rotation, int id, int pos) {
-        this.positiony = positiony;
-        this.positionx = positionx;
-        this.rotation = rotation;
-        this.id = id;
-        this.pos = pos;
-    }
-    
+   
 
    
+
+
     public Player() {
     }
 
-    public float getPositiony() {
-        return positiony;
+    public String getTecla() {
+        return tecla;
     }
 
-    public void setPositiony(float positiony) {
-        this.positiony = positiony;
-    }
-
-    public float getPositionx() {
-        return positionx;
-    }
-
-    public void setPositionx(float positionx) {
-        this.positionx = positionx;
-    }
-
-    public String getRotation() {
-        return rotation;
-    }
-
-    public void setRotation(String rotation) {
-        this.rotation = rotation;
+    public void setTecla(String tecla) {
+        this.tecla = tecla;
     }
 
     public int getId() {
@@ -66,18 +45,15 @@ public class Player implements Comparable<Player> {
     public void setId(int id) {
         this.id = id;
     }
+    
 
+  
     @Override
     public int compareTo(Player t) {
         return t.getId() - this.getId();
     }
 
-    public Player(float positiony, float positionx, String rotation, int id) {
-        this.positiony = positiony;
-        this.positionx = positionx;
-        this.rotation = rotation;
-        this.id = id;
-    }
+   
 
    
     

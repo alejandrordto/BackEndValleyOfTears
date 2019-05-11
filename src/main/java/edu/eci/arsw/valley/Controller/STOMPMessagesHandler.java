@@ -42,7 +42,6 @@ public class STOMPMessagesHandler {
     @MessageMapping("/room-movement")
     @SendTo("/topic/room-movement")
     public Player handleMoveEvent(Player player) throws Exception {
-
         return player;
     }
 
