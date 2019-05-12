@@ -9,12 +9,9 @@ package edu.eci.arsw.valley.Controller;
  *
  * @author AsusPC
  */
+import edu.eci.arsw.valley.Model.Bullet;
 import edu.eci.arsw.valley.Model.Player;
 import edu.eci.arsw.valley.Model.Wall;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -51,5 +48,11 @@ public class STOMPMessagesHandler {
     public Wall handleWall(Wall wall, @DestinationVariable("roomId") String roomId) throws Exception {
         return wall;
     }
-
+    
+    @MessageMapping("/bullet/{roomId}")
+    @SendTo("/topic/bullet-{roomId}")
+    public Bullet handleShoot(Bullet shoot, @DestinationVariable("roomId") String roomId) throws Exception {
+        System.out.println("El servidor recibio un disparo: " + shoot.getIdPlayer());
+        return shoot;
+    }
 }
