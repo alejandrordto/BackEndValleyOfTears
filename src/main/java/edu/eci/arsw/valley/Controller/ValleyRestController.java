@@ -50,7 +50,7 @@ public class ValleyRestController {
         try {
             
             services.registerPlayerToRoom(Integer.parseInt(roomId), pl);
-                    return new ResponseEntity<>(HttpStatus.CREATED);
+            return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (ServicesException ex) {
             Logger.getLogger(ValleyRestController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>(ex.getMessage(),HttpStatus.BAD_REQUEST);

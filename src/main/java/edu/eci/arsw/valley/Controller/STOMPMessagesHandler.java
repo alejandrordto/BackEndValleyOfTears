@@ -39,9 +39,9 @@ public class STOMPMessagesHandler {
         return "Nothing";
     }
 
-    @MessageMapping("/room-movement")
-    @SendTo("/topic/room-movement")
-    public Player handleMoveEvent(Player player) throws Exception {
+       @MessageMapping("/movement/{roomId}")
+    @SendTo("/topic/room-movement-{roomId}")
+    public Player handleMoveEvent(Player player, @DestinationVariable("roomId") String roomId) throws Exception {
         return player;
     }
 
