@@ -10,6 +10,7 @@ package edu.eci.arsw.valley.Controller;
  * @author AsusPC
  */
 import edu.eci.arsw.valley.Model.Player;
+import edu.eci.arsw.valley.Model.Wall;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -39,10 +40,16 @@ public class STOMPMessagesHandler {
         return "Nothing";
     }
 
-       @MessageMapping("/movement/{roomId}")
+    @MessageMapping("/movement/{roomId}")
     @SendTo("/topic/room-movement-{roomId}")
     public Player handleMoveEvent(Player player, @DestinationVariable("roomId") String roomId) throws Exception {
         return player;
+    }
+    
+    @MessageMapping("/wall/{roomId}")
+    @SendTo("/topic/walls-{roomId}")
+    public Wall handleWall(Wall wall, @DestinationVariable("roomId") String roomId) throws Exception {
+        return wall;
     }
 
 }
