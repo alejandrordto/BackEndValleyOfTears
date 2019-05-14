@@ -46,7 +46,7 @@ public class STOMPMessagesHandler {
         return player;
     }
     
-    @MessageMapping("/wall/{roomId}")
+    @MessageMapping("/walls-{roomId}")
     @SendTo("/topic/walls-{roomId}")
     public Wall handleWall(Wall wall, @DestinationVariable("roomId") String roomId) throws Exception {
         return wall;

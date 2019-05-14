@@ -10,15 +10,7 @@ package edu.eci.arsw.valley.Model;
  * @author user
  */
 public class Wall {
-    int life,id;
-
-    public int getLife() {
-        return life;
-    }
-
-    public void setLife(int life) {
-        this.life = life;
-    }
+    int tipo,id;
 
     public int getId() {
         return id;
@@ -28,11 +20,23 @@ public class Wall {
         this.id = id;
     }
 
+    
+
+    
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
+   
+    
+
     public Wall() {
     }
 
-    public Wall(int life, int id) {
-        this.life = life;
-        this.id = id;
-    }
+   
 }
