@@ -10,18 +10,19 @@ package edu.eci.arsw.valley.Model;
  * @author Guzman
  */
 public class Bullet {
-    public int idPlayer; //tank, de quien es la bala
+    public int id; //tank, de quien es la bala
     public int posX,posY;
+	public String direccion; 
 
     public Bullet() {
     }
 
-    public int getIdPlayer() {
-        return idPlayer;
+    public int getId() {
+        return id;
     }
 
-    public void setIdPlayer(int idPlayer) {
-        this.idPlayer = idPlayer;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getPosX() {
@@ -39,6 +40,14 @@ public class Bullet {
     public void setPosY(int posY) {
         this.posY = posY;
     }
+	
+	public String getDireccion(){
+		return  direccion;
+	}
+	
+	public void setDireccion(String direccion){
+		this.direccion = direccion;
+	}
     
     
 }

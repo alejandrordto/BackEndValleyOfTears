@@ -52,7 +52,7 @@ public class STOMPMessagesHandler {
     @MessageMapping("/bullet/{roomId}")
     @SendTo("/topic/bullet-{roomId}")
     public Bullet handleShoot(Bullet shoot, @DestinationVariable("roomId") String roomId) throws Exception {
-        System.out.println("El servidor recibio un disparo: " + shoot.getIdPlayer());
+        System.out.println("El servidor recibio un disparo: " + shoot.getId());
         return shoot;
     }
 }
