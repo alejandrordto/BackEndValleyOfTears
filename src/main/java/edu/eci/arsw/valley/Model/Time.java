@@ -10,16 +10,10 @@ package edu.eci.arsw.valley.Model;
  * @author user
  */
 public class Time {
+
     boolean cronometro;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
     int id;
+
     public Time() {
     }
 
@@ -30,5 +24,13 @@ public class Time {
     public void setCronometro(boolean cronometro) {
         this.cronometro = cronometro;
     }
-            
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
