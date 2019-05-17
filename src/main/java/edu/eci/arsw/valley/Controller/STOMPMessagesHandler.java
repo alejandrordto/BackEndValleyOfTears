@@ -65,7 +65,7 @@ public class STOMPMessagesHandler {
     
     @MessageMapping("/time-{roomId}")
     @SendTo("/topic/time-{roomId}")
-    public Kill handleTime(Kill kill, @DestinationVariable("roomId") String roomId) throws Exception {        
-        return kill;
+    public Time handleTime(Time time, @DestinationVariable("roomId") String roomId) throws Exception {        
+        return time;
     }
 }
