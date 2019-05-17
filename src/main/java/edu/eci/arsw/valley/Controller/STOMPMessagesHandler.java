@@ -9,10 +9,10 @@ package edu.eci.arsw.valley.Controller;
  *
  * @author AsusPC
  */
-import edu.eci.arsw.valley.Model.Bullet;
-import edu.eci.arsw.valley.Model.Player;
-import edu.eci.arsw.valley.Model.Wall;
-import edu.eci.arsw.valley.Model.Maravilla;
+
+import edu.eci.arsw.valley.Model.*;
+
+
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -56,9 +56,25 @@ public class STOMPMessagesHandler {
         System.out.println("El servidor recibio un disparo: " + shoot.getId());
         return shoot;
     }
-	 @MessageMapping("/maravilla/{roomId}")
+
+    @MessageMapping("/maravilla/{roomId}")
     @SendTo("/topic/maravilla-{roomId}")
     public Maravilla handleMaravilla(Maravilla maravilla, @DestinationVariable("roomId") String roomId) throws Exception{
         return maravilla;
+    }
+
+
+    
+    @MessageMapping("/kill-{roomId}")
+    @SendTo("/topic/kill-{roomId}")
+    public Kill handleKill(Kill kill, @DestinationVariable("roomId") String roomId) throws Exception {        
+        return kill;
+    }
+    
+    @MessageMapping("/time-{roomId}")
+    @SendTo("/topic/time-{roomId}")
+    public Time handleTime(Time time, @DestinationVariable("roomId") String roomId) throws Exception {        
+        return time;
+
     }
 }
