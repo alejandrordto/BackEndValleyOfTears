@@ -12,6 +12,7 @@ package edu.eci.arsw.valley.Controller;
 import edu.eci.arsw.valley.Model.Bullet;
 import edu.eci.arsw.valley.Model.Player;
 import edu.eci.arsw.valley.Model.Wall;
+import edu.eci.arsw.valley.Model.Maravilla;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
@@ -54,5 +55,10 @@ public class STOMPMessagesHandler {
     public Bullet handleShoot(Bullet shoot, @DestinationVariable("roomId") String roomId) throws Exception {
         System.out.println("El servidor recibio un disparo: " + shoot.getId());
         return shoot;
+    }
+	 @MessageMapping("/maravilla/{roomId}")
+    @SendTo("/topic/maravilla-{roomId}")
+    public Maravilla handleMaravilla(Maravilla maravilla, @DestinationVariable("roomId") String roomId) throws Exception{
+        return maravilla;
     }
 }
